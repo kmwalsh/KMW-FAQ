@@ -35,10 +35,10 @@ add_filter('template_include', 'kmw__faq_template_archive');
 
 if ( ! function_exists('kmw___faq_scripts') ) {
 	function kmw___faq_scripts() {
-		wp_register_script( 'faq-js', plugins_url( '/js/faq-js.js', __FILE__ ), array( 'jQuery' ), '1.0.0', true );
+		wp_register_script( 'faq-js', plugins_url( '/kmw-faq/js/faq-js.js', __FILE__ ), array( 'jQuery' ), '1.0.0', true );
 		wp_enqueue_script( 'faq-js' );
 		
-		wp_enqueue_style( 'kmw-fs-css', plugins_url( 'css/style.css', __FILE__ ) );
+		wp_enqueue_style( 'kmw-fs-css', plugins_url( '/kmw-faq/css/faq-css.css', __FILE__ ) );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kmw___faq_scripts' );
